@@ -2,6 +2,9 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
+// prefix x will not run the test case xdescribe('AppComponent', () => {
+// prefix f will not only run the test case fdescribe('AppComponent', () => {
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
