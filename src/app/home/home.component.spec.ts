@@ -98,8 +98,7 @@ describe('HomeComponent', () => {
 
   // toBeNull
   it('toBeNull.', () => {
-    const name = null;
-    expect(name).toBeNull();
+    expect(component.stateValuea).toBeNull();
   });
 
   // toBeUndefined
@@ -108,40 +107,44 @@ describe('HomeComponent', () => {
     expect(name).toBeUndefined();
   });
 
-  // it('toHaveBeenCalled', function () {
-  //   var c = new component.circle();
-  //   spyOn(c, 'circumference');
-  //   c.circumference(2);
-  //   expect(c.circumference).toHaveBeenCalled();
-  // });
 
   // toBeLessThan
   it('toBeLessThan', () => {
-    var percent = 0.5;
-    expect(percent).toBeLessThan(1);
+    var percent = component.toBeLessThanValue;
+    expect(percent).toBeLessThan(11);
   });
 
   // toBeGreaterThan
   it('toBeGreaterThan', () => {
-    var percent = 12;
+    var percent = component.toBeGreaterThanValue;
     expect(percent).toBeGreaterThan(1);
   });
 
   // toBeLessThanOrEqual
   it('toBeLessThanOrEqual', () => {
-    var percent = 12;
+    var percent = component.toBeLessThanOrEqual;
     expect(percent).toBeLessThanOrEqual(14);
   });
 
   // toBeGreaterThanOrEqual
   it('toBeGreaterThanOrEqual', () => {
-    var percent = 12;
+    var percent = component.toBeGreaterThanOrEqual;
     expect(percent).toBeGreaterThanOrEqual(1);
   });
 
   // toBeNaN
   it('toBeNaN', () => {
-    expect(0 / 0).toBeNaN();
+    var toBeNaNValue = component.toBeNaN;
+    expect(toBeNaNValue).toBeNaN();
+  });
+
+  it('home works!', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('p').textContent).toBe('home works!');
+  });
+
+  it('toBeDefined', () => {
+    expect(component.stateValue).toBeDefined();
   });
 
 });

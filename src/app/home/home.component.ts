@@ -8,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public stateValue: string = 'state value';
+  public stateValuea: string  = null;
+  public toBeLessThanValue: number  = 1.5;
+  public toBeGreaterThanValue: number  = 1.5;
+  public toBeLessThanOrEqual: number  = 1.5;
+  public toBeGreaterThanOrEqual: number  = 15;
+  public toBeNaN = 0 / 0;
+
   welcome: string;
-  isLoggedIn = '';
+  isLoggedIn = 'a';
   circumference;
   isLoggedInArrary = ['a'];
 
@@ -18,8 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.welcome = this.isLoggedIn ?
-    'Welcome, ' + this.isLoggedIn : 'Please log in.';
+    this.welcome = this.isLoggedIn;
   }
 
   name(name) {
